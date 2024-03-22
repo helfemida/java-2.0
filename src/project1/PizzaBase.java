@@ -35,7 +35,7 @@ public class PizzaBase {
         this.baseName = baseName;
     }
 
-    @Override
+    @Override //static polymorphism
     public String toString() {
         return "PizzaBase information: " +
                 "baseName=" + baseName +

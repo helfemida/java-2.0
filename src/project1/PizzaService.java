@@ -10,10 +10,11 @@ public class PizzaService implements PizzaInterface {
     private int ordersId = 0;
     @Override
     public Pizza getPizzaBySize(String size) throws PizzaNotFoundException {
-        List<Pizza> storePizzas = store.getPizzasList();
-        for (Pizza pizza: storePizzas) {
-            if(pizza.getSize().equalsIgnoreCase(size)) {
-                return pizza;
+        List<Pizza> pizzas = store.getPizzasList();
+
+        for(int i = 0; i < pizzas.size(); i++){
+            if(pizzas.get(i).getSize().equalsIgnoreCase(size)){
+                return pizzas.get(i);
             }
         }
         throw new PizzaNotFoundException(pizzaNotFoundMessage);

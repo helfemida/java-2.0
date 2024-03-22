@@ -20,6 +20,7 @@ public class PizzaDashboard {
             case 1 -> openAdminRole();
             case 2 -> openAdminRole();
         }
+
     }
 
     public static void openAdminRole() {
